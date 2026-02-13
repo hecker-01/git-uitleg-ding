@@ -4,15 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b0f1a;
+        --fg: #e6ecf2;
+        --muted: #9aa7b3;
+        --accent: #7c5cff;
+        --card: rgba(255, 255, 255, 0.06);
+        --ring: rgba(124, 92, 255, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(
+          1200px 600px at 50% -20%,
+          #1a2340,
+          var(--bg)
+        );
+        color: var(--fg);
+        font-family:
+          "Inter",
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      .card {
+        width: min(680px, 92vw);
+        padding: 48px 40px;
+        border-radius: 20px;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(6px);
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome</h1>
-    <p>This is a sample webpage with some content.</p>
-    <ul>
-      <li>Item one</li>
-      <li>Item two</li>
-      <li>Item three</li>
-      <li>Item four</li>
-    </ul>
+    <div class="card">
+      <h1>Welcome</h1>
+      <p>This is a sample webpage with some content.</p>
+      <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+        <li>Item four</li>
+      </ul>
+    </div>
   </body>
 </html>
